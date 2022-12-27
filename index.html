@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/use/bookmark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>BookMark Saver</title>
+</head>
+<body>
+    <!-- header button -->
+    <div class="add-bookmark">ADD BOOKMARK</div>
+    <!-- bookmark container -->
+    <div class="bookmark-container">
+        <div class="bookmark">
+            <img src="/assets/pin.png" alt="thumbtack" class="thumbtack">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <img src="https://www.google.com/s2/favicons?domain=https://github.com/OMA-B/bookmark-saver" alt="favicon" class="favicon">
+            <a href="https://github.com/OMA-B/bookmark-saver" target="_blank" class="bookmark-link">bookmark saver</a>
+        </div>
+        <div class="bookmark">
+            <img src="/assets/pin.png" alt="thumbtack" class="thumbtack">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <img src="https://www.google.com/s2/favicons?domain=https://github.com/OMA-B/bookmark-saver" alt="favicon" class="favicon">
+            <a href="https://github.com/OMA-B/bookmark-saver" target="_blank" class="bookmark-link">bookmark saver</a>
+        </div>
+        <div class="bookmark">
+            <img src="/assets/pin.png" alt="thumbtack" class="thumbtack">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <img src="https://www.google.com/s2/favicons?domain=https://github.com/OMA-B/bookmark-saver" alt="favicon" class="favicon">
+            <a href="https://github.com/OMA-B/bookmark-saver" target="_blank" class="bookmark-link">bookmark saver</a>
+        </div>
+    </div>
+    <!-- Modal Overlay -->
+    <div class="overlay hide-modal">
+        <!-- Modal -->
+        <div class="modal">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <h3 class="form-title">Add BookMark</h3>
+            <form class="bookmark-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Website Name. . .">
+                <label for="url">URL:</label>
+                <input type="text" id="url" placeholder="Web Link Address. . .">
+                <input type="submit" value="SAVE" class="submit-btn">
+            </form>
+        </div>
+    </div>
+
+    <!-- Functionality section -->
+    <script src="/use/bookmark.js"></script>
+</body>
+</html>
