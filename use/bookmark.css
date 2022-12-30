@@ -162,9 +162,7 @@ body {
     cursor: pointer;
 }
 
-.submit-btn:hover, .submit-btn:active {
-    filter: brightness(120%);
-}
+.submit-btn:hover, .submit-btn:active { filter: brightness(120%); }
 
 /* ------------ Animation to let modal fade in ----------- */
 @keyframes fade-in {
@@ -178,12 +176,30 @@ body {
 
     .bookmark { 
         margin-right: 15px;
-        padding: 25px 25px 15px;
+        padding: 25px 40px 15px 25px;
     }
 }
 
 @media screen and (min-width: 480px) {
-    .modal {
-        width: 432px;
-    }
+    .modal { width: 432px; }
+}
+
+/* ------------ Coder ----------- */
+.coded-by {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(255 255 255/ 90%);
+    font-size: 14px;
+}
+
+.coded-by i, .coded-by a { 
+    color: #d31003;
+    font-weight: bold; 
+}
+
+.coded-by a:hover, .coded-by a:active { 
+    text-decoration: underline;
+    color: rgb(255 255 255/ 90%);
 }

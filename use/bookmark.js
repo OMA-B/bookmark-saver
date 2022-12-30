@@ -14,8 +14,10 @@ let bookmarks = [];
 // updating bookmarks in the DOM
 const update_DOM = () => {
     // checking if there is any bookmark saved in the browser's storage
-    if (localStorage) {
-        bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    if (!localStorage) {
+        instruction.hidden = false;
+    } else {
+        bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
         // refreshing the bookmark container
         bookmark_container.textContent = '';
         // displaying in the DOM, if there is
@@ -60,8 +62,6 @@ const update_DOM = () => {
                 });
             });
         }
-    } else {
-        instruction.hidden = false;
     }
 }
 // calling
@@ -76,7 +76,7 @@ const web_validation = (title, url) => {
         alert('Please, input a valid web address!');
     } else {
         // storing bookmark
-        bookmarks.push({ title, url });
+        bookmarks?.push({ title, url });
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
     update_DOM();
