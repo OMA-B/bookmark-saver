@@ -76,7 +76,7 @@ const web_validation = (title, url) => {
         alert('Please, input a valid web address!');
     } else {
         // storing bookmark
-        bookmarks.push({ title, url });
+        bookmarks.push({ title: title, url: url });
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
     update_DOM();
@@ -98,8 +98,7 @@ const save_bookmark = (e) => {
         web_validation(title, url);
     }
     // clearing input fields after submitting data
-    bookmark_form.children[1].value = '';
-    bookmark_form.children[3].value = '';
+    bookmark_form.reset();
     // hiding modal
     modal_overlay.classList.add('hide-modal');
 }
