@@ -17,7 +17,7 @@ const update_DOM = () => {
     if (!localStorage) {
         instruction.hidden = false;
     } else {
-        bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+        bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
         // refreshing the bookmark container
         bookmark_container.textContent = '';
         // displaying in the DOM, if there is
