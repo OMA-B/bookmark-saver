@@ -9,7 +9,14 @@ const instruction = document.querySelector('.instruction');
 // Global variables
 let title;
 let url;
-let bookmarks = [];
+const bookmarking = () => {
+    let bookmarks = [];
+    if (bookmarks === null) {
+        bookmarks = [];
+    }
+    return bookmarks;
+}
+bookmarking();
 
 // updating bookmarks in the DOM
 const update_DOM = () => {
@@ -76,11 +83,7 @@ const web_validation = (title, url) => {
         alert('Please, input a valid web address!');
     } else {
         // storing bookmark
-        if (bookmarks === null) {
-            bookmarks = [].push({ title: title, url: url });
-        } else {
-            bookmarks.push({ title: title, url: url });   
-        }
+        bookmarks.push({ title: title, url: url });
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
     update_DOM();
