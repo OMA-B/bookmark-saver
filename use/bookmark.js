@@ -76,7 +76,11 @@ const web_validation = (title, url) => {
         alert('Please, input a valid web address!');
     } else {
         // storing bookmark
-        bookmarks.push({ title: title, url: url });
+        if (bookmarks === null) {
+            bookmarks = [].push({ title: title, url: url });
+        } else {
+            bookmarks.push({ title: title, url: url });   
+        }
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
     update_DOM();
