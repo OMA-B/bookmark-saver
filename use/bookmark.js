@@ -86,20 +86,20 @@ const web_validation = (title, url) => {
 const save_bookmark = (e) => {
     e.preventDefault();
     // to make sure form is not submitted empty
-    if (e.srcElement[0].value === '' || e.srcElement[1].value === '') {
+    if (bookmark_form.children[1].value === '' || bookmark_form.children[3].value === '') {
         alert('Please, fill all fields!');
     } else {
         // caching input data
-        title = e.srcElement[0].value;
+        title = bookmark_form.children[1].value;
         // checking if url already had http/https or not
-        e.srcElement[1].value.includes('http://') || e.srcElement[1].value.includes('https://') ? url = e.srcElement[1].value : url = `https://${e.srcElement[1].value}`;
+        bookmark_form.children[3].value.includes('http://') || bookmark_form.children[3].value.includes('https://') ? url = bookmark_form.children[3].value : url = `https://${bookmark_form.children[3].value}`;
 
         // validating web address
         web_validation(title, url);
     }
     // clearing input fields after submitting data
-    e.srcElement[0].value = '';
-    e.srcElement[1].value = '';
+    bookmark_form.children[1].value = '';
+    bookmark_form.children[3].value = '';
     // hiding modal
     modal_overlay.classList.add('hide-modal');
 }
